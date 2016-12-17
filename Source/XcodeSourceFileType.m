@@ -30,6 +30,7 @@ static NSDictionary* NSDictionaryWithXCFileReferenceTypes()
             @"image.png"             : @(ImageResourcePNG),
             @"wrapper.cfbundle"      : @(Bundle),
             @"archive.ar"            : @(Archive),
+            @"text.json"             : @(JSON),
             @"text.html"             : @(HTML),
             @"text"                  : @(TEXT),
             @"wrapper.pb-project"    : @(XcodeProject),
@@ -105,6 +106,10 @@ XcodeSourceFileType XCSourceFileTypeFromFileName(NSString* fileName)
     if ([fileName hasSuffix:@".plist"])
     {
         return PropertyList;
+    }
+    if ([fileName hasSuffix:@".json"])
+    {
+        return JSON;
     }
     return FileTypeNil;
 }

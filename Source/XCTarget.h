@@ -45,6 +45,7 @@
 @property(nonatomic, strong) NSString* productName;
 @property(nonatomic, strong, readonly) NSString* productReference;
 @property(nonatomic, strong, readonly) NSString* productType;
+@property(nonatomic, readonly) XCProject* project;
 
 + (XCTarget*)targetWithProject:(XCProject*)project key:(NSString*)key name:(NSString*)name productName:(NSString*)productName
     productReference:(NSString*)productReference productType:(NSString*)productType;

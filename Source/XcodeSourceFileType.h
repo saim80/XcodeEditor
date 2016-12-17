@@ -38,7 +38,8 @@ typedef NS_OPTIONS(NSInteger, XcodeSourceFileType)
     Storyboard = 22,             // .storyboard (file.storyboard)
     XCConfig = 23,               // .xcconfig
     XCDataModel = 24,            // .xcdatamodel
-    LocalizableStrings = 25      // .strings
+    LocalizableStrings = 25,     // .strings
+    JSON = 26
 };
 
 NSString* NSStringFromXCSourceFileType(XcodeSourceFileType type);

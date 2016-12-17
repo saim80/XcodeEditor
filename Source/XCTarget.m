@@ -508,4 +508,8 @@
     return dupTargetObjKey;
 }
 
+- (XCProject *)project {
+    return _project;
+}
+
 @end

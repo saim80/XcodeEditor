@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 #import "XcodeGroupMember.h"
+#import "XcodeSourceTreeType.h"
 #import "XcodeSourceFileType.h"
 #import "XCBuildFile.h"
 
@@ -159,6 +160,7 @@
 - (void)addFolderReference:(NSString*)sourceFolder;
 
 - (void)addFileReference:(NSString *)filePath withType:(XcodeSourceFileType)type;
+- (void)addFileReference:(NSString *)filePath withType:(XcodeSourceFileType)type sourceTree:(XcodeSourceTreeType)sourceTree;
 
 /**
 * Adds a framework to the _group, making it a member of the specified targets.

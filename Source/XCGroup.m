@@ -251,8 +251,13 @@
 
 - (void)addFileReference:(NSString *)filePath withType:(XcodeSourceFileType)type
 {
+    [self addFileReference:filePath withType:type sourceTree:SourceTreeGroup];
+}
+
+- (void)addFileReference:(NSString *)filePath withType:(XcodeSourceFileType)type sourceTree:(XcodeSourceTreeType)sourceTree
+{
     NSDictionary *folderReferenceDictionary =
-    [self makeFileReferenceWithPath:filePath name:[filePath lastPathComponent] type:type sourceTree:SourceTreeGroup];
+    [self makeFileReferenceWithPath:filePath name:[filePath lastPathComponent] type:type sourceTree:sourceTree];
     NSString *folderReferenceKey = [[XCKeyBuilder forItemNamed:[filePath lastPathComponent]] build];
     [self addMemberWithKey:folderReferenceKey];
     [_project objects][folderReferenceKey] = folderReferenceDictionary;
