@@ -222,4 +222,6 @@
 
 - (void)dropCache;
 
+- (NSString *)rootObjectKey;
+
 @end
